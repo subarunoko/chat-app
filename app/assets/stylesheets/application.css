@@ -17,3 +17,8 @@
 * {
   box-sizing: border-box;
 }
+
+/* 余分なマージンが入っているので以下はその対策 */
+body {
+  margin: 0;
+}

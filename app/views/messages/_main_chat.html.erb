@@ -1,7 +1,8 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="left-title">
-      hogefuga
+      <%# hogefuga %>
+      <%= @room.name %>
     </div>
   </div>
   <div class="right-header">
@@ -10,7 +11,7 @@
     </div>
   </div>
 </div>
-<div class="messages">
+<%# <div class="messages">
   <div class="message">
     <div class="upper-message">
       <div class="message-user">
@@ -42,7 +43,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> %>
 
 <%# <div class="form">
   <div class="form-input">
@@ -54,6 +55,10 @@
   </div>
   <input class="form-submit" type="submit" value="送信">
 </div> %>
+
+<div class="messages">
+  <%= render partial: "message", collection: @messages %>
+</div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
